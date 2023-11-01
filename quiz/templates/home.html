@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+{% if current_user.is_authenticated %}
+<h1>Welcome {{current_user.username}}!</h1>
+<a href="{{ url_for('quiz_page', id=1) }}">Take the quiz.</a>
+{% else %}
+<h1>Welcome!</h1>
+
+<div class="checkbox mb-3">
+    <h3>For taking the quiz, please log in.</h3>
+    <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page')}}">Login</a>
+</div>
+<div class="checkbox mb-3">
+    <h3>Do not have an account?</h3>
+    <a class="btn btn-sm btn-secondary" href="{{ url_for('register_page')}}">Register</a>
+</div>
+{% endif %}
+{% endblock %}
