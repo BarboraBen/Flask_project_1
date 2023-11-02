@@ -1,8 +1,8 @@
-#Flask Quiz Application
+# Flask Quiz Application
 
 This repository contains a Flask-based web application for a quiz. Users can register, log in, take a quiz, and view results.
 
-Project Structure
+## Project Structure
 
     quiz - This directory contains the main application code.
         routes.py - The Flask application's main code.
@@ -14,7 +14,7 @@ Project Structure
     instance - Directory, where db is stored.
     README.md  - Description of project
 
-Functionality
+## Functionality
 
     Home Page: Accessible at / or /home. From here, users can start the quiz.
     Registration: Users can sign up for an account at /register.
@@ -23,7 +23,7 @@ Functionality
     Results: Upon completion, users can view the results at /results.
     Logout: Users can log out at /logout.
 
-Routes
+## Routes
 
     / or /home: Home page
     /register: User registration
